@@ -14,8 +14,13 @@ async function signUpUserApi(userData) {
 		const response = await fetch(URL, options);
 		const data = await response.json();
 		loaderOff();
+		toastMessage(
+			`<i>${data.firstName}</i>, thank you for registering!`,
+			"green"
+		);
 	} catch (error) {
 		loaderOff();
+		toastMessage(`Something went wrong, please try again`, "red");
 		console.error(error);
 	}
 }
