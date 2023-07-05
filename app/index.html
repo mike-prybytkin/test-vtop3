@@ -38,7 +38,7 @@
 
               <div class="row">
                 <div class="input-field col m6 s12 form__nationality">
-                  <select class="icons">
+                  <select class="icons" id="user_nationality">
                     <option value="1" selected data-icon="images/src/icons/usa.png">USA</option>
                     <option value="2" data-icon="images/src/icons/finland.png">Finland</option>
                     <option value="3" data-icon="images/src/icons/canada.png">Canada</option>
@@ -49,8 +49,8 @@
                   <label>Nationality</label>
                 </div>
                 <div class="input-field col m6 s12">
-                  <input id="signup-email" type="email" class="novalidate">
-                  <label for="signup-email">Email</label>
+                  <input id="signup_email" type="email" class="novalidate">
+                  <label for="signup_email">Email</label>
                 </div>
               </div>
 
@@ -62,12 +62,12 @@
                 <div class="col s6 form__radio radio">
                   <span class="radio__title">Gender</span>
                   <div class="radio__buttons">
-                    <label class="radio__label">
-                      <input class="with-gap radio__input" name="gender" type="radio" checked>
+                    <label class="radio__label radio__label_1">
+                      <input class="with-gap radio__input" name="gender" type="radio" value="male" checked>
                       <span class="radio__buttons-title">Male</span>
                     </label>
                     <label class="radio__label radio__label_2">
-                      <input class="with-gap radio__input" name="gender" type="radio">
+                      <input class="with-gap radio__input" name="gender" type="radio" value="female">
                       <span class="radio__buttons-title">Female</span>
                     </label>
                   </div>
@@ -76,12 +76,12 @@
 
               <div class="row">
                 <div class="input-field col m6 s12">
-                  <input id="signup-password" type="password" class="novalidate">
-                  <label for="signup-password">Password</label>
+                  <input id="signup_password" type="password" class="novalidate">
+                  <label for="signup_password">Password</label>
                 </div>
                 <div class="input-field col m6 s12">
-                  <input id="signup-confirm-password" type="password" class="novalidate">
-                  <label for="signup-confirm-password">Confirm Password</label>
+                  <input id="signup_confirm_password" type="password" class="novalidate">
+                  <label for="signup_confirm_password">Confirm Password</label>
                 </div>
               </div>
             </form>
@@ -100,6 +100,11 @@
     </div>
 
   </main>
+
+  <div class="loader">
+    <img class="loader__img" src="images/src/gif/loader.gif" alt="loader">
+  </div>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
   <script type="module" src="js/main.min.js"></script>
