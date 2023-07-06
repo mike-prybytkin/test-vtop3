@@ -6,6 +6,19 @@
 
     .row {
       margin-bottom: 0;
+
+      .form-wrapper__first-name,
+      .form-wrapper__last-name,
+      .form-wrapper__nationality,
+      .form-wrapper__signup-email,
+      .form-wrapper__datepicker,
+      .form-wrapper__radio,
+      .form-wrapper__signup-password,
+      .form-wrapper__signup-confirm-password {
+        position: relative; // for animejs
+        bottom: -50px; // for animejs
+        opacity: 0; // for animejs
+      }
     }
   }
 }
@@ -24,7 +37,7 @@
   }
 }
 
-.form__radio.radio {
+.form-wrapper__radio.radio {
   position: relative;
   padding: 0;
 }

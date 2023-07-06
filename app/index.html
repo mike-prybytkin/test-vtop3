@@ -25,19 +25,19 @@
           </div>
           <div class="form__body row">
             <form class="col s12 form-wrapper" id="form-signup" method="post">
-              <div class="row">
-                <div class="input-field col m6 s12">
-                  <input id="first_name" type="text" class="novalidate">
+              <div class="row row_1">
+                <div class="input-field col m6 s12 form-wrapper__first-name">
+                  <input id="first_name" type="text" class="novalidate first_name">
                   <label for="first_name">First Name</label>
                 </div>
-                <div class="input-field col m6 s12">
-                  <input id="last_name" type="text" class="novalidate">
+                <div class="input-field col m6 s12 form-wrapper__last-name">
+                  <input id="last_name" type="text" class="novalidate last_name">
                   <label for="last_name">Last Name</label>
                 </div>
               </div>
 
-              <div class="row">
-                <div class="input-field col m6 s12 form__nationality">
+              <div class="row row_2">
+                <div class="input-field col m6 s12 form-wrapper__nationality">
                   <select class="icons" id="user_nationality">
                     <option value="1" selected data-icon="images/src/icons/usa.png">USA</option>
                     <option value="2" data-icon="images/src/icons/finland.png">Finland</option>
@@ -48,18 +48,18 @@
                   </select>
                   <label>Nationality</label>
                 </div>
-                <div class="input-field col m6 s12">
+                <div class="input-field col m6 s12 form-wrapper__signup-email">
                   <input id="signup_email" type="email" class="novalidate">
                   <label for="signup_email">Email</label>
                 </div>
               </div>
 
-              <div class="row">
-                <div class="input-field col m6 s12">
+              <div class="row row_3">
+                <div class="input-field col m6 s12 form-wrapper__datepicker">
                   <input id="datepicker" type="text" class="datepicker">
                   <label for="datepicker">Date of Birth</label>
                 </div>
-                <div class="col s6 form__radio radio">
+                <div class="col s6 form-wrapper__radio radio">
                   <span class="radio__title">Gender</span>
                   <div class="radio__buttons">
                     <label class="radio__label radio__label_1">
@@ -74,12 +74,12 @@
                 </div>
               </div>
 
-              <div class="row">
-                <div class="input-field col m6 s12">
+              <div class="row row_4">
+                <div class="input-field col m6 s12 form-wrapper__signup-password">
                   <input id="signup_password" type="password" class="novalidate">
                   <label for="signup_password">Password</label>
                 </div>
-                <div class="input-field col m6 s12">
+                <div class="input-field col m6 s12 form-wrapper__signup-confirm-password">
                   <input id="signup_confirm_password" type="password" class="novalidate">
                   <label for="signup_confirm_password">Confirm Password</label>
                 </div>
@@ -107,7 +107,8 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
-  <script type="module" src="js/main.min.js"></script>
+  <script src="https://animejs.com/lib/anime.min.js"></script>
+  <script src="js/main.min.js"></script>
 </body>
 
 </html>
