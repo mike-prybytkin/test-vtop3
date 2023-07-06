@@ -25,13 +25,15 @@
 
 .form__header {
   .form__title {
-    margin: 0;
+    @include dots-on-text-overflow ($width: 130px);
     @include font-primary($size: 22px, $weight: 500);
+    margin: 0;
     letter-spacing: -0.5px;
   }
   .form__description {
-    margin: 0;
+    @include dots-on-text-overflow ($width: 300px);
     @include font-primary($size: 14px);
+    margin: 0;
     letter-spacing: -0.3px;
     line-height: 18px;
   }
@@ -59,6 +61,7 @@
   }
 
   .form__login-link {
+    @include dots-on-text-overflow ($width: 160px);
     margin-top: 3px;
     a {
       text-decoration: underline;
