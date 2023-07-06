@@ -11,6 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		defaultDate: new Date(2000, 0, 1),
 		setDefaultDate: true,
 		format: "dd mmmm yyyy",
-    yearRange: [1930, 2024],
+		yearRange: [1930, 2024],
 	});
 });

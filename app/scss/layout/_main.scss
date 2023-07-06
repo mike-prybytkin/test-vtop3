@@ -28,6 +28,7 @@
 
 .main__col {
   height: 100%;
+  position: relative;
 
   &_1 {
     align-self: stretch;
@@ -66,6 +67,22 @@
     padding: 40px 20px 33px 20px;
     @include media-tablet-small {
       padding: 6px;
+    }
+  }
+}
+
+.main__bg-img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 307px;
+  height: 355px;
+
+  .bg-form-main {
+    width: 307px;
+    height: 355px;
+    path {
+      opacity: 0,
     }
   }
 }
