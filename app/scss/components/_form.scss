@@ -45,6 +45,7 @@
 }
 
 .form__footer {
+  position: relative;
   margin-top: 78px;
   @include flex($justify: space-between, $align: start);
   letter-spacing: -0.9px;

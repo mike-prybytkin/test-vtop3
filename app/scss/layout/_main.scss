@@ -58,6 +58,7 @@
         writing-mode: inherit;
         transform: rotate(0deg);
         margin: 10px;
+        @include dots-on-text-overflow ($height: auto, $width: 130px);
       }
     }
   }
