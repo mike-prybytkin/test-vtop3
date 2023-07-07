@@ -28,6 +28,7 @@
 
 .main__col {
   height: 100%;
+  position: relative;
 
   &_1 {
     align-self: stretch;
@@ -42,8 +43,10 @@
       width: 100%;
     }
 
-    .main__title {     
-      margin: 0 10px 21px 0;
+    .main__title {
+      @include dots-on-text-overflow ($height: 175px);
+      padding-left: 4px;
+      margin: 0 6px 21px 0;
       transform: rotate(180deg);
       writing-mode: vertical-lr;
       font-size: 49px;
@@ -55,6 +58,7 @@
         writing-mode: inherit;
         transform: rotate(0deg);
         margin: 10px;
+        @include dots-on-text-overflow ($height: auto, $width: 130px);
       }
     }
   }
@@ -66,6 +70,22 @@
     padding: 40px 20px 33px 20px;
     @include media-tablet-small {
       padding: 6px;
+    }
+  }
+}
+
+.main__bg-img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 307px;
+  height: 355px;
+
+  .bg-form-main {
+    width: 307px;
+    height: 355px;
+    path {
+      opacity: 0,
     }
   }
 }

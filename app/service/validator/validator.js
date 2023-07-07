@@ -52,8 +52,8 @@ const optionsForConfirmPassword = [
 	},
 	{
 		validator: (value, fields) => {
-			if (fields["#signup-password"] && fields["#signup-password"].elem) {
-				const repeatPasswordValue = fields["#signup-password"].elem.value;
+			if (fields["#signup_password"] && fields["#signup_password"].elem) {
+				const repeatPasswordValue = fields["#signup_password"].elem.value;
 
 				return value === repeatPasswordValue;
 			}
@@ -68,14 +68,19 @@ const validator = new window.JustValidate("#form-signup", {
 	tooltip: {
 		position: "top",
 	},
-	errorFieldStyle: {
-		color: "red",
-	},
 });
 
 validator
 	.addField("#first_name", optionsForTextInput)
 	.addField("#last_name", optionsForTextInput)
-	.addField("#signup-email", optionsForEmailInput)
-	.addField("#signup-password", optionsForPassword)
-	.addField("#signup-confirm-password", optionsForConfirmPassword);
+	.addField("#signup_email", optionsForEmailInput)
+	.addField("#signup_password", optionsForPassword)
+	.addField("#signup_confirm_password", optionsForConfirmPassword)
+
+	.onSuccess((event) => {
+		successSignUpForm(event.target);
+		validator.refresh();
+	})
+	.onFail(() => {
+		failSignUpForm();
+	});
