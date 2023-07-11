@@ -16,4 +16,4 @@ const readMoreText = () => {
 	});
 };
 
-readMoreText();
+document.addEventListener('DOMContentLoaded', readMoreText);
