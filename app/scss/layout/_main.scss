@@ -13,7 +13,7 @@
   }
 
   .main__wrapper {
-    @include flex($justify: space-between, $align: flex-start);
+    @include flex($justify: space-between, $align: flex-start, $flow: row nowrap);
     height: auto;
     padding: 60px 68px;
     @include media-laptop {
@@ -44,7 +44,7 @@
     }
 
     .main__title {
-      @include dots-on-text-overflow ($height: 175px);
+      height: 175px;
       padding-left: 4px;
       margin: 0 6px 21px 0;
       transform: rotate(180deg);
@@ -58,7 +58,8 @@
         writing-mode: inherit;
         transform: rotate(0deg);
         margin: 10px;
-        @include dots-on-text-overflow ($height: auto, $width: 130px);
+        height: auto;
+        width: 130px;
       }
     }
   }
